@@ -6,12 +6,12 @@
 @endsection
 
 @section('main')
-    <h1>New user</h1>
-    <form action="/users/create" method="post">
-        <p>Name</p><input type="text" name="name">
-        <p>Email</p><input type="text" name="email"><br />
-        <input type="submit" value="Create User">
-    </form>
+    <p style="color: #00FF00;">User was successfully created.</p>
+    <p><b>Name</b>: {{ $user->name }}</p>
+    <p><b>Email</b>: {{ $user->email }}</p>
+    <a href="/users/{{ $user->id}}/edit" style="display: inline-block;">Edit</a>
+    <span> | </span>
+    <a href="/users" style="display: inline-block;">Back</a>
 @endsection
 
 @section('sidebar')

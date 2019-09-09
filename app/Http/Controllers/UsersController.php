@@ -30,7 +30,7 @@ class UsersController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $user->fill($form)->save();
-        return redirect('/users');
+        return view('users.show', [ 'user' => $user ]);
     }
 
     public function edit($id)
@@ -45,7 +45,7 @@ class UsersController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $user->fill($form)->save();
-        return redirect('/users');
+        return view('users.show', [ 'user' => $user ]);
     }
 
     public function destroy($id)

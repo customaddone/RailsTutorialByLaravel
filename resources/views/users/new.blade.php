@@ -7,9 +7,11 @@
 
 @section('main')
     <h1>New user</h1>
-    <form action="/users/create" method="post">
-        <p>Name</p><input type="text" name="name">
-        <p>Email</p><input type="text" name="email"><br />
+    <form action="/users" method="post">
+        <!-- csrf置かないとNo messageが出る-->
+        {{ csrf_field() }}
+        <p>Name</p><input type="text" name="name" value="{{ old('name') }}">
+        <p>Email</p><input type="text" name="email" value="{{ old('email') }}"><br />
         <input type="submit" value="Create User">
     </form>
 @endsection
