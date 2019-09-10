@@ -6,7 +6,7 @@
 @endsection
 
 @section('main')
-    <p style="color: #00FF00;">User was successfully created.</p>
+    <h1>Show users</h1>
     <p><b>Name</b>: {{ $user->name }}</p>
     <p><b>Email</b>: {{ $user->email }}</p>
     <a href="/users/{{ $user->id}}/edit" style="display: inline-block;">Edit</a>

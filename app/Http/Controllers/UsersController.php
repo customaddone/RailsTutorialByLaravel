@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 
+/* リレーショナルベースの作成、取得、更新、削除（CRUD）と４つの基本的な
+HTTP requestメソッド（POST/GET/PATCH/DELETE）の両方に対応しています*/
 class UsersController extends Controller
 {
     public function index()
