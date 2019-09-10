@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::resource('users', 'UsersController');
 // マイクロポスト一覧、登録
 Route::resource('microposts', 'MicropostsController');
+// 静的ページの作成
+Route::get('/static_pages', 'StaticPagesController@index');
