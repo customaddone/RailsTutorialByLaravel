@@ -21,5 +21,9 @@ class User extends Authenticatable
      *
      * @var array
      */
-
+     /* UserはMicropostを複数持つ */
+     public function microposts()
+     {
+         return hasMany('App\Micropost');
+     }
 }

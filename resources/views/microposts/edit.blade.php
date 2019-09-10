@@ -7,6 +7,16 @@
 
 @section('main')
     <h1>Edit microposts</h1>
+    @if (count($errors) > 0)
+    <div class="errors">
+        <h3>エラーがあります</h3>
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="/microposts/{{ $micropost->id }}" method="post">
         {{ csrf_field() }}
         {{ method_field('patch') }}

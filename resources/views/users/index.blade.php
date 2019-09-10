@@ -27,7 +27,7 @@
                     method="post" style="display:inline">
                     {{ csrf_field() }}
                     {{ method_field('delete') }}
-                <td><a href="#" data-id="{{ $user->id }}" onclick="deletePost(this);">delete</a></td>
+                <td><a href="#" data-id="{{ $user->id }}" onclick="deletePost(this);">Destroy</a></td>
                 </form>
                 <script>
                     function deletePost(e) {

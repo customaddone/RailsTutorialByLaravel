@@ -7,6 +7,16 @@
 
 @section('main')
     <h1>New micropost</h1>
+    @if (count($errors) > 0)
+    <div class="errors">
+        <h3>エラーがあります</h3>
+        <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
     <form action="/microposts" method="post">
         <!-- csrf置かないとNo messageが出る-->
         {{ csrf_field() }}

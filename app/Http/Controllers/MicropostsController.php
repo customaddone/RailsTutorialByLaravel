@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Micropost;
+use App\Http\Requests\MicropostsRequest;
 use Illuminate\Http\Request;
 
 class MicropostsController extends Controller
@@ -24,7 +25,7 @@ class MicropostsController extends Controller
         return view('microposts.new');
     }
 
-    public function store(Request $request)
+    public function store(MicropostsRequest $request)
     {
         $micropost = new Micropost;
         $form = $request->all();
@@ -39,7 +40,7 @@ class MicropostsController extends Controller
         return view('microposts.edit', [ 'micropost' => $micropost ]);
     }
 
-    public function update(Request $request)
+    public function update(MicropostsRequest $request)
     {
         $micropost = Micropost::find($request->id);
         $form = $request->all();
