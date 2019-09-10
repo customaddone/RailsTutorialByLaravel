@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 // ユーザー一覧、登録
 Route::resource('users', 'UsersController');
+// マイクロポスト一覧、登録
+Route::resource('microposts', 'MicropostsController');
